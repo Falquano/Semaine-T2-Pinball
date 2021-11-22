@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Flipper : MonoBehaviour
 {
+    [SerializeField] private FlipperCollisionDetector collisionDetector;
+
     [SerializeField] private float restingAngle = 0;
     [SerializeField] private float activeAngle = -30;
     private float AngleDifference => activeAngle - restingAngle;
@@ -21,6 +23,14 @@ public class Flipper : MonoBehaviour
         {
             transform.localEulerAngles = transform.localEulerAngles + Vector3.up * AnglePerFrame;
             frameCounter++;
+
+            if (collisionDetector.IsColliding)
+            {
+                Quaternion rotation = Quaternion.Euler(0, 1.5f * AnglePerFrame + transform.localEulerAngles.y, 0);
+                Vector3 direction = rotation * Vector3.forward;
+                Debug.DrawRay(collisionDetector.CollisionPosition, direction, Color.red, 0.1f);
+                collisionDetector.Bille.AddForce(direction * 2, ForceMode.VelocityChange);
+            }
         } else if (!active && frameCounter > 0)
         {
             transform.localEulerAngles = transform.localEulerAngles - Vector3.up * AnglePerFrame;
@@ -35,4 +45,5 @@ public class Flipper : MonoBehaviour
         else if (context.canceled)
             active = false;
     }
+
 }
