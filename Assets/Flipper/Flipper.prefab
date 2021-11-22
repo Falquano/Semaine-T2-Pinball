@@ -48,6 +48,7 @@ MonoBehaviour:
   restingAngle: 0
   activeAngle: -45
   activationFrames: 5
+  throwForce: 8
 --- !u!1 &4207982789754226591
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e867c21a68bba8d448fd8ef4ddd80c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pivot: {x: 0, y: 0, z: 0}
 --- !u!33 &4207982789754226587
 MeshFilter:
   m_ObjectHideFlags: 0

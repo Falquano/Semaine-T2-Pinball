@@ -12,6 +12,8 @@ public class Flipper : MonoBehaviour
     private float AngleDifference => activeAngle - restingAngle;
 
     [SerializeField] private int activationFrames = 5;
+
+    [SerializeField] private float throwForce = 6f;
     private int frameCounter = 0;
     private float AnglePerFrame => AngleDifference / (float)activationFrames;
 
@@ -19,18 +21,26 @@ public class Flipper : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector3 throwDirection = Vector3.zero;
+        if (collisionDetector.IsColliding)
+        {
+            Quaternion rotation = Quaternion.Euler(0, 1f * AnglePerFrame + transform.localEulerAngles.y, 0);
+            throwDirection = rotation * Vector3.forward + rotation * collisionDetector.Bille.velocity * .75f;
+            //throwDirection = rotation * transform.forward + rotation * collisionDetector.Bille.velocity * .75f;
+            float distance = Vector3.Distance(transform.position, collisionDetector.Bille.position);
+            throwDirection *= distance + .5f;
+            Debug.DrawRay(collisionDetector.CollisionPosition, throwDirection * distance, Color.red, 0.1f);
+        }
+
         if (active && frameCounter < activationFrames)
         {
+            if (collisionDetector.IsColliding && collisionDetector.CanThrow)
+            {
+                collisionDetector.Bille.AddForce(throwDirection * throwForce, ForceMode.VelocityChange);
+                collisionDetector.CanThrow = false;
+            }
             transform.localEulerAngles = transform.localEulerAngles + Vector3.up * AnglePerFrame;
             frameCounter++;
-
-            if (collisionDetector.IsColliding)
-            {
-                Quaternion rotation = Quaternion.Euler(0, 1.5f * AnglePerFrame + transform.localEulerAngles.y, 0);
-                Vector3 direction = rotation * Vector3.forward;
-                Debug.DrawRay(collisionDetector.CollisionPosition, direction, Color.red, 0.1f);
-                collisionDetector.Bille.AddForce(direction * 2, ForceMode.VelocityChange);
-            }
         } else if (!active && frameCounter > 0)
         {
             transform.localEulerAngles = transform.localEulerAngles - Vector3.up * AnglePerFrame;

@@ -8,11 +8,15 @@ public class FlipperCollisionDetector : MonoBehaviour
     public Vector3 CollisionPosition { get; private set; }
     public Vector3 ThrowAngle { get; private set; }
     public Rigidbody Bille { get; set; }
+    public bool CanThrow { get; set; }
+
+    [SerializeField] private Vector3 pivot;
 
     private void OnCollisionEnter(Collision collision)
     {
         IsColliding = true;
         Bille = collision.rigidbody;
+        CanThrow = true;
     }
 
     private void OnCollisionStay(Collision collision)
@@ -24,5 +28,6 @@ public class FlipperCollisionDetector : MonoBehaviour
     {
         IsColliding = false;
         Bille = null;
+        CanThrow = true;
     }
 }
