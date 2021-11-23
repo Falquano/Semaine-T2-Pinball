@@ -1647,6 +1647,7 @@ GameObject:
   - component: {fileID: 1785793469}
   - component: {fileID: 1785793468}
   - component: {fileID: 1785793474}
+  - component: {fileID: 1785793467}
   m_Layer: 6
   m_Name: Bille
   m_TagString: Untagged
@@ -1654,6 +1655,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1785793467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785793466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -8873147
+      Data2: 1295632247
+      Data3: -1669678167
+      Data4: -1611077659
+    Path: event:/Vaisseau
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!54 &1785793468
 Rigidbody:
   m_ObjectHideFlags: 0

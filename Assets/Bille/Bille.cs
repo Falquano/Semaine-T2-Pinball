@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,17 @@ using UnityEngine;
 public class Bille : MonoBehaviour
 {
     private Rigidbody body;
-
+    private StudioEventEmitter sound;
+    
     private void Start()
     {
         body = GetComponent<Rigidbody>();
+        sound = GetComponent<StudioEventEmitter>();
+    }
+
+    private void Update()
+    {
+        sound.SetParameter("Vitesse", body.velocity.magnitude);
     }
 
     private void FixedUpdate()
