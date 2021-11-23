@@ -15,4 +15,9 @@ public class Bille : MonoBehaviour
     {
         Debug.DrawRay(transform.position, body.velocity, Color.yellow);
     }
+
+	private void OnCollisionEnter(Collision collision)
+	{
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Mur");
+    }
 }
