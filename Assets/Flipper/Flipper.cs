@@ -24,12 +24,14 @@ public class Flipper : MonoBehaviour
         Vector3 throwDirection = Vector3.zero;
         if (collisionDetector.IsColliding)
         {
-            Quaternion rotation = Quaternion.Euler(0, 1f * AnglePerFrame + transform.localEulerAngles.y, 0);
-            throwDirection = rotation * Vector3.forward + rotation * collisionDetector.Bille.velocity * .75f;
+            Quaternion rotation = Quaternion.Euler(0, 8f * AnglePerFrame + transform.localEulerAngles.y, 0); // Pourquoi 8 ? Je ne sais pas.
+            throwDirection = rotation * Vector3.forward + // Vers le haut
+                rotation * collisionDetector.Bille.velocity * .75f; // Vers la velocité
             //throwDirection = rotation * transform.forward + rotation * collisionDetector.Bille.velocity * .75f;
             float distance = Vector3.Distance(transform.position, collisionDetector.Bille.position);
             throwDirection *= distance + .5f;
             Debug.DrawRay(collisionDetector.CollisionPosition, throwDirection * distance, Color.red, 0.1f);
+            Debug.DrawRay(collisionDetector.Bille.position, collisionDetector.Bille.velocity, Color.blue, 0.1f);
         }
 
         if (active && frameCounter < activationFrames)
