@@ -25,21 +25,23 @@ public class Flipper : MonoBehaviour
         if (collisionDetector.IsColliding)
         {
             Quaternion rotation = Quaternion.Euler(0, 8f * AnglePerFrame + transform.localEulerAngles.y, 0); // Pourquoi 8 ? Je ne sais pas.
-            throwDirection = rotation * Vector3.forward + // Vers le haut
-                rotation * collisionDetector.Bille.velocity * .75f; // Vers la velocité
+            throwDirection = rotation * Vector3.forward * 2f; // Vers le haut
+            float velocityStrength = Mathf.Log10(collisionDetector.Bille.velocity.magnitude + 1);
+            throwDirection += rotation * collisionDetector.Bille.velocity.normalized * velocityStrength * 1f; // Vers la velocité
             //throwDirection = rotation * transform.forward + rotation * collisionDetector.Bille.velocity * .75f;
             float distance = Vector3.Distance(transform.position, collisionDetector.Bille.position);
             throwDirection *= distance + .5f;
             Debug.DrawRay(collisionDetector.CollisionPosition, throwDirection * distance, Color.red, 0.1f);
-            Debug.DrawRay(collisionDetector.Bille.position, collisionDetector.Bille.velocity, Color.blue, 0.1f);
         }
 
         if (active && frameCounter < activationFrames)
         {
             if (collisionDetector.IsColliding && collisionDetector.CanThrow)
             {
-                collisionDetector.Bille.AddForce(throwDirection * throwForce, ForceMode.VelocityChange);
+                //collisionDetector.Bille.AddForce(throwDirection * throwForce, ForceMode.VelocityChange); // Ca c'est cool, c'est propre, mais ça ne fonctionne pas
+                collisionDetector.Bille.velocity = throwDirection * throwForce;
                 collisionDetector.CanThrow = false;
+                //collisionDetector.IgnoreCollisionsWithBall(.25f);
             }
             transform.localEulerAngles = transform.localEulerAngles + Vector3.up * AnglePerFrame;
             frameCounter++;
