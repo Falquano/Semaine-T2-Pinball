@@ -18,6 +18,6 @@ public class Bille : MonoBehaviour
 
 	private void OnCollisionEnter(Collision collision)
 	{
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Mur");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Obstacles/Mur");
     }
 }
