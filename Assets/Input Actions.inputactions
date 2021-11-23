@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Carousel Speed",
+                    "type": "Value",
+                    "id": "a28ff3d3-5eb5-4748-ae72-03aef18a7c2c",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -96,6 +104,39 @@
                     "action": "Magnet",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "ae0f6e7e-0df5-4029-a0d7-b13952beb3dd",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Carousel Speed",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "54304f29-301e-41b2-98ac-ef9852483d43",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Carousel Speed",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "26a2fbaa-2f3d-4997-8889-3ec179e3eef4",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Carousel Speed",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
