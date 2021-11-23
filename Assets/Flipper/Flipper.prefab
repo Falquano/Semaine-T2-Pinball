@@ -48,7 +48,7 @@ MonoBehaviour:
   restingAngle: 0
   activeAngle: -45
   activationFrames: 5
-  throwForce: 8
+  throwForce: 32
 --- !u!1 &4207982789754226591
 GameObject:
   m_ObjectHideFlags: 0

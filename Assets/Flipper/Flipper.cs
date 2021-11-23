@@ -24,13 +24,13 @@ public class Flipper : MonoBehaviour
         Vector3 throwDirection = Vector3.zero;
         if (collisionDetector.IsColliding)
         {
-            Quaternion rotation = Quaternion.Euler(0, 8f * AnglePerFrame + transform.localEulerAngles.y, 0); // Pourquoi 8 ? Je ne sais pas.
-            throwDirection = rotation * Vector3.forward * 2f; // Vers le haut
+            Quaternion rotation = Quaternion.Euler(0, 2f * AnglePerFrame + transform.localEulerAngles.y, 0);
+            throwDirection = rotation * Vector3.forward * 1.5f; // Vers le haut
             float velocityStrength = Mathf.Log10(collisionDetector.Bille.velocity.magnitude + 1);
-            throwDirection += rotation * collisionDetector.Bille.velocity.normalized * velocityStrength * 1f; // Vers la velocité
+            throwDirection += rotation * collisionDetector.Bille.velocity.normalized * velocityStrength * .75f; // Vers la velocité
             //throwDirection = rotation * transform.forward + rotation * collisionDetector.Bille.velocity * .75f;
             float distance = Vector3.Distance(transform.position, collisionDetector.Bille.position);
-            throwDirection *= distance + .5f;
+            throwDirection *= distance + .1f;
             Debug.DrawRay(collisionDetector.CollisionPosition, throwDirection * distance, Color.red, 0.1f);
         }
 
@@ -38,8 +38,8 @@ public class Flipper : MonoBehaviour
         {
             if (collisionDetector.IsColliding && collisionDetector.CanThrow)
             {
-                //collisionDetector.Bille.AddForce(throwDirection * throwForce, ForceMode.VelocityChange); // Ca c'est cool, c'est propre, mais ça ne fonctionne pas
-                collisionDetector.Bille.velocity = throwDirection * throwForce;
+                collisionDetector.Bille.AddForce(throwDirection * throwForce, ForceMode.Impulse); // Ca c'est cool, c'est propre, mais ça ne fonctionne pas
+                //collisionDetector.Bille.velocity = throwDirection * throwForce;
                 collisionDetector.CanThrow = false;
                 //collisionDetector.IgnoreCollisionsWithBall(.25f);
             }
