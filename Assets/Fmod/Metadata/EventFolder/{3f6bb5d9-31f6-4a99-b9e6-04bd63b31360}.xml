@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{3f6bb5d9-31f6-4a99-b9e6-04bd63b31360}">
+		<property name="name">
+			<value>Zaap</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d4b269de-5a70-4244-9d31-a7be1d6e2d79}</destination>
+		</relationship>
+	</object>
+</objects>
