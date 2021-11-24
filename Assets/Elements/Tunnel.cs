@@ -63,6 +63,7 @@ public class Tunnel : MonoBehaviour
         attachedBille = null;
 
         Invoke("ActivateTrigger", 1f);
+        Debug.Log("Plop");
     }
 
     private void ActivateTrigger()

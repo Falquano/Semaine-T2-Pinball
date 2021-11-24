@@ -39,6 +39,7 @@ public class Bille : MonoBehaviour
         force.enabled = false;
         body.isKinematic = false;
         body.velocity = Vector3.zero;
+        body.angularVelocity = Vector3.zero;
     }
 
     public void ActivatePhysics()

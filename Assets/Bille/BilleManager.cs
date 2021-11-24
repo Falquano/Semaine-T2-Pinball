@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class BilleManager : MonoBehaviour
 {
-    private Bille bille;
+    [SerializeField] private Bille bille;
     public Bille CurrentBille { get => bille; set => SetBille(value); }
 
     [SerializeField] private UnityEvent<Bille> onBilleChange;
