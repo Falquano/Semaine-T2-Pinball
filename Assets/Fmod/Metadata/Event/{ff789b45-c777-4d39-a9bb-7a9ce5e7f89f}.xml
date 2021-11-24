@@ -63,7 +63,11 @@
 			<destination>{08e21a87-6eab-4523-b5ca-d536469682c5}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{4d62d977-873d-4800-b1d1-cdb9b4478c22}" />
+	<object class="EventAutomatableProperties" id="{4d62d977-873d-4800-b1d1-cdb9b4478c22}">
+		<property name="isPersistent">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{5f510e4f-026b-4aa6-9270-5006b174d63f}" />
 	<object class="GroupTrack" id="{ac4ba720-cd98-4452-973c-e8ef532ae476}">
 		<relationship name="automationTracks">
@@ -220,7 +224,7 @@
 		<relationship name="automationPoints">
 			<destination>{8660e2a8-e2e4-47f4-8f4c-faf9372e68f4}</destination>
 			<destination>{b94a3543-6e00-4209-b079-5a22051fc991}</destination>
-			<destination>{7c3f5759-da1d-48d4-a6be-d38e4048a412}</destination>
+			<destination>{cf7c73f0-c952-4c37-8745-6acc992f3f93}</destination>
 		</relationship>
 	</object>
 	<object class="PitchShifterEffect" id="{9b961f43-de13-409b-87c9-623eaff37fc8}">
@@ -240,6 +244,9 @@
 		<property name="value">
 			<value>-80</value>
 		</property>
+		<property name="curveShape">
+			<value>0.00950666238</value>
+		</property>
 	</object>
 	<object class="AutomationPoint" id="{b94a3543-6e00-4209-b079-5a22051fc991}">
 		<property name="position">
@@ -249,12 +256,12 @@
 			<value>0</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{7c3f5759-da1d-48d4-a6be-d38e4048a412}">
+	<object class="AutomationPoint" id="{cf7c73f0-c952-4c37-8745-6acc992f3f93}">
 		<property name="position">
-			<value>1.781609195402299</value>
+			<value>6</value>
 		</property>
 		<property name="value">
-			<value>-13.7274208</value>
+			<value>-9</value>
 		</property>
 	</object>
 	<object class="Automator" id="{b31f113c-15e3-44f0-b747-f1991dcd318e}">
