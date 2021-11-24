@@ -319,6 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 235346821}
   - component: {fileID: 235346822}
+  - component: {fileID: 235346823}
   m_Layer: 0
   m_Name: Carousel
   m_TagString: Untagged
@@ -335,7 +336,7 @@ Transform:
   m_GameObject: {fileID: 235346820}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1.5}
   m_Children:
   - {fileID: 841918712}
   m_Father: {fileID: 1100620509}
@@ -355,6 +356,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAngle: 1440
   timeToReachMaxSpeed: 2
+  strength: 18
+--- !u!135 &235346823
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235346820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &289954411
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +863,6 @@ GameObject:
   - component: {fileID: 841918712}
   - component: {fileID: 841918715}
   - component: {fileID: 841918714}
-  - component: {fileID: 841918713}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -872,20 +886,6 @@ Transform:
   m_Father: {fileID: 235346821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &841918713
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841918711}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &841918714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1762,7 +1762,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!135 &1785793469
 SphereCollider:

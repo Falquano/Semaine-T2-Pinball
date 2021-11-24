@@ -9,6 +9,8 @@ public class SoundOnBilleImpact : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bille"))
-            FMODUnity.RuntimeManager.PlayOneShot("event:/" + soundPath);
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/" + soundPath, collision.contacts[0].point);
+        }
     }
 }
