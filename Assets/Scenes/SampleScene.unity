@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 63587088}
   - component: {fileID: 63587087}
   - component: {fileID: 63587086}
+  - component: {fileID: 63587089}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -257,7 +258,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -296,6 +296,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63587084}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &63587089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63587084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97df4716474d06248b3a8bf145addf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPath: Obstacles/Mur
 --- !u!1 &235346820
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +367,7 @@ GameObject:
   - component: {fileID: 289954415}
   - component: {fileID: 289954414}
   - component: {fileID: 289954413}
+  - component: {fileID: 289954416}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -399,7 +413,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -438,6 +451,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289954411}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &289954416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289954411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97df4716474d06248b3a8bf145addf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPath: Obstacles/Mur
 --- !u!1 &388979545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2908f558344fb3e4d914c2b35e64e044, type: 3}
@@ -493,6 +519,7 @@ GameObject:
   - component: {fileID: 402320093}
   - component: {fileID: 402320092}
   - component: {fileID: 402320091}
+  - component: {fileID: 402320094}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -538,7 +565,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -577,6 +603,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402320089}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &402320094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402320089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97df4716474d06248b3a8bf145addf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPath: Obstacles/Mur
 --- !u!4 &434715145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8474621604921522384, guid: dd6a3cecef93aab4f87fe59b598150a0, type: 3}
@@ -760,7 +799,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -859,7 +897,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1134,6 +1171,7 @@ GameObject:
   - component: {fileID: 1299996614}
   - component: {fileID: 1299996613}
   - component: {fileID: 1299996612}
+  - component: {fileID: 1299996615}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -1179,7 +1217,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -1218,6 +1255,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299996610}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1299996615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299996610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97df4716474d06248b3a8bf145addf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPath: Obstacles/Mur
 --- !u!1 &1334611023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,6 +1507,7 @@ GameObject:
   - component: {fileID: 1698268439}
   - component: {fileID: 1698268438}
   - component: {fileID: 1698268437}
+  - component: {fileID: 1698268440}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1502,7 +1553,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
@@ -1541,6 +1591,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698268435}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1698268440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698268435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97df4716474d06248b3a8bf145addf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPath: Obstacles/Mur
 --- !u!1 &1731921611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1650,7 +1713,7 @@ GameObject:
   - component: {fileID: 1785793467}
   m_Layer: 6
   m_Name: Bille
-  m_TagString: Untagged
+  m_TagString: Bille
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

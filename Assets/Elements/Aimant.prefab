@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8474621604921522389}
   - component: {fileID: 8474621604921522386}
   - component: {fileID: 8474621604921522387}
+  - component: {fileID: 8942130885492416451}
   m_Layer: 0
   m_Name: Aimant
   m_TagString: Untagged
@@ -53,7 +54,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -114,3 +114,16 @@ MonoBehaviour:
   strength: 42
   maxRange: 4
   minRange: 0.5
+--- !u!114 &8942130885492416451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8474621604921522385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97df4716474d06248b3a8bf145addf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPath: Obstacles/Mur
