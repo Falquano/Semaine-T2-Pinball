@@ -17,7 +17,6 @@ public class Bumper : MonoBehaviour
     {
         Vector3 direction = collision.gameObject.transform.position - transform.position;
         collision.rigidbody.AddForce(direction.normalized * strength, ForceMode.Impulse);
-        Debug.Log("BUMP !");
 
         BumpFX();
     }

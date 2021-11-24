@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Aimant : MonoBehaviour
 {
+	private BilleManager manager;
     public bool MagnetOn { get; set; } = false;
     [SerializeField] private Rigidbody bille;
 	[SerializeField] private float strength = 2f;
@@ -12,18 +13,27 @@ public class Aimant : MonoBehaviour
 
 	private void Start()
 	{
-		if (bille == null)
-			throw new System.Exception("Il faut assigner une bille ici");
+		if (manager == null)
+			manager = GameObject.FindObjectOfType<BilleManager>();
+		if (manager == null)
+			throw new System.Exception("Il faut un BilleManager dans la scène !");
+
+		manager.OnBilleChange.AddListener(SetBille);
 	}
 
-	public void SetBille(Rigidbody newBille)
+	public void SetBille(Bille newBille)
 	{
-		bille = newBille;
+		if (newBille == null)
+		{
+			bille = null;
+			return;
+		}
+		bille = newBille.GetComponent<Rigidbody>();
 	}
 
 	void FixedUpdate()
     {
-		if (!MagnetOn)
+		if (!MagnetOn || bille == null)
 			return;
 		Vector3 direction = (transform.position - bille.position).normalized;
 		float distanceStrength = Vector3.Distance(transform.position, bille.position) - minRange;

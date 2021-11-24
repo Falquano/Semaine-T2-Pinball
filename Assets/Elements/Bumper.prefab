@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984ccc92fe6dbe248b3eddad7ec6b624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 16
+  strength: 64
   bumpLights: {fileID: 971882311407294712}
   bumpLightsDuration: 0.2
 --- !u!114 &-7095561666307971650

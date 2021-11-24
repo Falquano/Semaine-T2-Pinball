@@ -17,7 +17,6 @@ public class PointGiver : MonoBehaviour
         if (!other.CompareTag("Bille"))
             return;
 
-        Debug.Log(Points);
         pointsManager.Points += Points;
         OnPoints.Invoke();
     }

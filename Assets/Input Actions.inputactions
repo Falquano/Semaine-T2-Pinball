@@ -36,6 +36,14 @@
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Launch Ball",
+                    "type": "Button",
+                    "id": "7f252d52-d7e2-4b8e-ad85-da590b995ef6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -137,6 +145,17 @@
                     "action": "Carousel Speed",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "493ffed5-ad0c-43a3-abda-16ab1bc9feb5",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Launch Ball",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

@@ -6,21 +6,20 @@ using System.IO;
 
 public class Bille : MonoBehaviour
 {
+    public BilleManager Manager { get; set; }
     private Rigidbody body;
     private StudioEventEmitter sound;
-
-    private StreamWriter writer;
 
     private void Start()
     {
         body = GetComponent<Rigidbody>();
         sound = GetComponent<StudioEventEmitter>();
-        writer = new StreamWriter("C:/Users/Etudiant/Desktop/data.csv");
+        Manager = GameObject.FindObjectOfType<BilleManager>();
     }
 
-    private void OnApplicationQuit()
+    private void OnDestroy()
     {
-        writer.Close();
+        Manager.CurrentBille = null;
     }
 
     private void Update()
@@ -31,6 +30,5 @@ public class Bille : MonoBehaviour
     private void FixedUpdate()
     {
         Debug.DrawRay(transform.position, body.velocity, Color.yellow);
-        writer.Write(Time.time.ToString().Replace(',', '.') + ", " + body.velocity.magnitude.ToString("F1").Replace(',', '.') + "\n");
     }
 }
