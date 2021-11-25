@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bille: {fileID: 0}
-  strength: 42
+  strength: 80
   maxRange: 4
-  minRange: 0.5
+  minRange: 2
 --- !u!114 &8942130885492416451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,3 +127,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.5
+  rumbleDuration: 0.1

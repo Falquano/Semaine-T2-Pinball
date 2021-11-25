@@ -29,7 +29,7 @@ public class Tunnel : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(transform.position, otherEnd.transform.position);
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, ejectDirection * ejectStrength);
+        Gizmos.DrawRay(transform.position, ejectDirection.normalized * ejectStrength);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -60,7 +60,7 @@ public class Tunnel : MonoBehaviour
     public void EjectBall()
     {
         attachedBille.DetachAnimation();
-        attachedBille.GetComponent<Rigidbody>().AddForce(ejectDirection * ejectStrength, ForceMode.Impulse);
+        attachedBille.GetComponent<Rigidbody>().AddForce(ejectDirection.normalized * ejectStrength, ForceMode.Impulse);
 
         attachedBille = null;
 

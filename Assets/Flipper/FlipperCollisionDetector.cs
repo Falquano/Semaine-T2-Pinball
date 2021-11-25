@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlipperCollisionDetector : MonoBehaviour
 {
+    [SerializeField] private BilleManager billeManager;
     private Collider flipperCollider;
     public bool IsColliding { get; private set; }
     public Vector3 CollisionPosition { get; private set; }
@@ -18,6 +19,7 @@ public class FlipperCollisionDetector : MonoBehaviour
     private void Start()
     {
         flipperCollider = GetComponent<Collider>();
+        billeManager.OnBilleChange.AddListener(ChangeBille);
     }
 
     public void IgnoreCollisionsWithBall(float duration)
@@ -50,6 +52,13 @@ public class FlipperCollisionDetector : MonoBehaviour
     }
 
     private void OnCollisionExit(Collision collision)
+    {
+        IsColliding = false;
+        Bille = null;
+        CanThrow = true;
+    }
+
+    public void ChangeBille(Bille newBille)
     {
         IsColliding = false;
         Bille = null;

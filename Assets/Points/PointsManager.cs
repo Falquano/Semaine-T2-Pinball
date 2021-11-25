@@ -42,7 +42,6 @@ public class PointsManager : MonoBehaviour
         else
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/" + lowPointSoundPath);
-            Debug.Log("Points");
         }
     }
 }

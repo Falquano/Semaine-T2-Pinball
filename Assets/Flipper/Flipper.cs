@@ -69,5 +69,4 @@ public class Flipper : MonoBehaviour
             active = false;
         }
     }
-
 }

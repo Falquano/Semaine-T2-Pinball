@@ -32,6 +32,8 @@ public class RumbleManager : MonoBehaviour
     {
         timeRemaining = 0f;
         currentIntensity = 0f;
+        if (gamepad == null)
+            return;
         gamepad.SetMotorSpeeds(0f, 0f);
     }
 
