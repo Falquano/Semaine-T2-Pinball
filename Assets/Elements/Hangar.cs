@@ -9,6 +9,8 @@ public class Hangar : MonoBehaviour
     [SerializeField] private Vector3 launchOffset;
     [SerializeField] private float maxVelocity = 32;
     public Vector3 LaunchPosition => transform.position + launchOffset;
+    [SerializeField] private string launchSoundEffect = "Other/Eject";
+    [SerializeField] private float launchTimeOffset = 1.7f;
 
     private void Start()
     {
@@ -16,19 +18,25 @@ public class Hangar : MonoBehaviour
             throw new System.Exception("Il faut le prefab de bille !");
     }
 
-    public void LaunchBall(float velocity)
+    public void LaunchBall()
     {
         if (manager.CurrentBille != null)
             return;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/" + launchSoundEffect);
+        Invoke("Eject", launchTimeOffset);
+    }
+
+    public void Eject()
+    {
         manager.CurrentBille = Instantiate(billePrefab, LaunchPosition, Quaternion.identity).GetComponent<Bille>();
         Rigidbody billebody = manager.CurrentBille.GetComponent<Rigidbody>();
-        billebody.AddForce(Vector3.forward * velocity, ForceMode.VelocityChange);
+        billebody.AddForce(Vector3.forward * maxVelocity, ForceMode.VelocityChange);
     }
 
     public void InputLaunchBall(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         if (context.performed)
-            LaunchBall(maxVelocity);
+            LaunchBall();
     }
 
     private void OnDrawGizmosSelected()

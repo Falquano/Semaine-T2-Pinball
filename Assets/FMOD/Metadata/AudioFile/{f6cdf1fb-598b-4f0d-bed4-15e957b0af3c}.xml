@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f6cdf1fb-598b-4f0d-bed4-15e957b0af3c}">
+		<property name="assetPath">
+			<value>Metal, Impact, Fence, Chainlinked, Hand SND23834 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.2066875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4f9aab6c-e91f-4673-8fd5-2eb18e037afe}</destination>
+		</relationship>
+	</object>
+</objects>

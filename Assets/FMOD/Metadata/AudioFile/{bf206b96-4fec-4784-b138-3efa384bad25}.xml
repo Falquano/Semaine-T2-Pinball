@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bf206b96-4fec-4784-b138-3efa384bad25}">
+		<property name="assetPath">
+			<value>ScoreGain-002.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.68492063492063493</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4f9aab6c-e91f-4673-8fd5-2eb18e037afe}</destination>
+		</relationship>
+	</object>
+</objects>

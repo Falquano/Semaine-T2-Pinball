@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d935e374-3549-4378-b169-bbe1504e6f89}">
+		<property name="assetPath">
+			<value>Voices, Futzed, GPS, Sat Nav, Male Voice, English, Says You Have Reached Your Destination SND33162.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.094125</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4f9aab6c-e91f-4673-8fd5-2eb18e037afe}</destination>
+		</relationship>
+	</object>
+</objects>

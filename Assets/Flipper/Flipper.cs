@@ -19,6 +19,8 @@ public class Flipper : MonoBehaviour
 
     private bool active = false;
 
+    [SerializeField] private string soundOnActivation = "Other/Flipper";
+
     private void FixedUpdate()
     {
         Vector3 throwDirection = Vector3.zero;
@@ -55,9 +57,15 @@ public class Flipper : MonoBehaviour
     public void BumperInput(InputAction.CallbackContext context)
     {
         if (context.performed)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/" + soundOnActivation, transform.position);
             active = true;
+        }
         else if (context.canceled)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/" + soundOnActivation, transform.position);
             active = false;
+        }
     }
 
 }

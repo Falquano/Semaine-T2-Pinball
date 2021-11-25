@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b2e4bfc5-5f4f-416f-bcc8-d1a6cd2dca42}">
+		<property name="assetPath">
+			<value>Food &amp; Drink, Drinking, Human, Drinking Coffee, Male, Slurping SND4236.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.45279166666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4f9aab6c-e91f-4673-8fd5-2eb18e037afe}</destination>
+		</relationship>
+	</object>
+</objects>

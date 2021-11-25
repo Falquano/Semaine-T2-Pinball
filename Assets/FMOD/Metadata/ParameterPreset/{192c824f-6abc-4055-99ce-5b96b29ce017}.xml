@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{192c824f-6abc-4055-99ce-5b96b29ce017}">
+		<property name="name">
+			<value>AimantPitch</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5b434933-86f9-4901-9cae-1f441b08204f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1b8d48e2-939c-42dc-abca-d537780f4702}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1b8d48e2-939c-42dc-abca-d537780f4702}">
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

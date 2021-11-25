@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4ed8221f-2e8e-4297-8611-e3a935919ba6}">
+		<property name="name">
+			<value>CarrouselleVitesse</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5b434933-86f9-4901-9cae-1f441b08204f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a7347705-b275-4aa0-afd1-7b0486a20b5b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a7347705-b275-4aa0-afd1-7b0486a20b5b}">
+		<property name="minimum">
+			<value>-1</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
