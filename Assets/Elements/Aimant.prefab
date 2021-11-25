@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &174049681550456596
 Transform:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
   strength: 80
   maxRange: 4
   minRange: 2
-  light: {fileID: 238960138437243721}
+  lightFX: {fileID: 238960138437243721}
 --- !u!114 &8942130885492416451
 MonoBehaviour:
   m_ObjectHideFlags: 0

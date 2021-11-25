@@ -8,7 +8,7 @@
 			<value>ZaapClose</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3f6bb5d9-31f6-4a99-b9e6-04bd63b31360}</destination>
@@ -136,6 +136,7 @@
 	<object class="MixerBusEffectChain" id="{4aa1498a-33dc-432a-8f6d-a6138110f43c}">
 		<relationship name="effects">
 			<destination>{80e63c92-a1cd-4381-94ea-2bd492f29336}</destination>
+			<destination>{f40d036b-381a-4a86-b806-f89385f80b92}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4c62843f-7c98-4444-9624-5dd0b82532b3}" />
@@ -172,6 +173,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{9405af59-4345-452d-997b-592f1b185475}" />
 	<object class="MixerBusFader" id="{80e63c92-a1cd-4381-94ea-2bd492f29336}" />
+	<object class="SpatialiserEffect" id="{f40d036b-381a-4a86-b806-f89385f80b92}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{c2fcfee2-c549-415a-beec-c3c7ef4d9832}">
 		<relationship name="parameter">
 			<destination>{b00a45d0-1341-4ce4-887b-685421519b96}</destination>

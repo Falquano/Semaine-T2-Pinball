@@ -12,7 +12,7 @@ public class Aimant : MonoBehaviour
 	[SerializeField] private float strength = 2f;
 	[SerializeField] private float maxRange = 6f;
 	[SerializeField] private float minRange = 2f;
-	[SerializeField] private GameObject light;
+	[SerializeField] private GameObject lightFX;
 
 	private void Start()
 	{
@@ -27,7 +27,7 @@ public class Aimant : MonoBehaviour
 	private void SetMagnetOn(bool value)
     {
 		magnetOn = value;
-		light.SetActive(value);
+		lightFX.SetActive(value);
     }
 
 	public void SetBille(Bille newBille)
@@ -42,7 +42,7 @@ public class Aimant : MonoBehaviour
 
 	void FixedUpdate()
     {
-		if (!MagnetOn || bille == null)
+		if (!MagnetOn || bille == null || bille.isKinematic)
 			return;
 		Vector3 direction = (transform.position - bille.position).normalized;
 		float distanceStrength = Vector3.Distance(transform.position, bille.position) - minRange;

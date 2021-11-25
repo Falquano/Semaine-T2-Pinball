@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{551b15ad-9a7e-478e-b669-bc6a4a53338a}">
+		<property name="name">
+			<value>activation_aimant</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5b434933-86f9-4901-9cae-1f441b08204f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{566409a7-69ed-40c2-a2d1-ed38bf86e6c8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{566409a7-69ed-40c2-a2d1-ed38bf86e6c8}">
+		<property name="initialValue">
+			<value>0.5</value>
+		</property>
+	</object>
+</objects>

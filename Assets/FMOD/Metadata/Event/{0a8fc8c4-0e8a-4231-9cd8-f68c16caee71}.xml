@@ -191,6 +191,9 @@
 		<property name="length">
 			<value>2.1566064441457589</value>
 		</property>
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -226,6 +229,9 @@
 	<object class="SingleSound" id="{07d9ab71-d8ec-4af2-bc78-3be76f4348b4}">
 		<property name="length">
 			<value>2.1621666666666668</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{edd693b6-408e-4d36-a6d0-9d1f326f3a45}</destination>

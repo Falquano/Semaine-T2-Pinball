@@ -110,7 +110,7 @@
 			<value>0.5</value>
 		</property>
 		<property name="volume">
-			<value>-10.5</value>
+			<value>10</value>
 		</property>
 		<relationship name="automators">
 			<destination>{8dabeb6e-7450-4596-b873-d62882df00af}</destination>

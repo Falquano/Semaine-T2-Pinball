@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8bfe8612-14a7-4407-8572-85fcc64781c5}">
+		<property name="name">
+			<value>Aimant onoff</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5b434933-86f9-4901-9cae-1f441b08204f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f1577444-de10-426f-9619-d3b7f507f4a5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f1577444-de10-426f-9619-d3b7f507f4a5}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Begin</value>
+			<value>Off</value>
+			<value>On</value>
+		</property>
+		<property name="initialValue">
+			<value>2</value>
+		</property>
+	</object>
+</objects>

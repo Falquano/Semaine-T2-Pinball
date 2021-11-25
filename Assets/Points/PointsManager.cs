@@ -21,10 +21,11 @@ public class PointsManager : MonoBehaviour
 
     private void SetPoints(int value)
     {
+        int increase = value - points;
         points = value;
         pointUIText.text = value.ToString();
 
-        PointFX(value);
+        PointFX(increase);
         if (Points > HighScore)
             HighScore = Points;
     }
