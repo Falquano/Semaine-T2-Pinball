@@ -5,11 +5,14 @@ using UnityEngine;
 public class Aimant : MonoBehaviour
 {
 	private BilleManager manager;
-    public bool MagnetOn { get; set; } = false;
+
+	private bool magnetOn = false;
+    public bool MagnetOn { get => magnetOn; set => SetMagnetOn(value); }
     [SerializeField] private Rigidbody bille;
 	[SerializeField] private float strength = 2f;
 	[SerializeField] private float maxRange = 6f;
 	[SerializeField] private float minRange = 2f;
+	[SerializeField] private GameObject light;
 
 	private void Start()
 	{
@@ -20,6 +23,12 @@ public class Aimant : MonoBehaviour
 
 		manager.OnBilleChange.AddListener(SetBille);
 	}
+
+	private void SetMagnetOn(bool value)
+    {
+		magnetOn = value;
+		light.SetActive(value);
+    }
 
 	public void SetBille(Bille newBille)
 	{
@@ -47,9 +56,7 @@ public class Aimant : MonoBehaviour
 	public void InputMagnet(UnityEngine.InputSystem.InputAction.CallbackContext context)
 	{
 		if (context.performed)
-			MagnetOn = true;
-		else if (context.canceled)
-			MagnetOn = false;
+			MagnetOn = !MagnetOn;
 	}
 
 	private void OnDrawGizmosSelected()

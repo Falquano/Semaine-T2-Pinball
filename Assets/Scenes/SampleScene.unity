@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2381452798738972551, guid: c1906f6c309f742479ce696617e2b63b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1906f6c309f742479ce696617e2b63b, type: 3}
@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 96920170}
   - component: {fileID: 96920169}
   - component: {fileID: 96920168}
+  - component: {fileID: 96920172}
   m_Layer: 0
   m_Name: MoveWall
   m_TagString: Untagged
@@ -590,6 +591,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &96920172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96920167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a67743f8ae0a049ace9481cc78ad93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: -0.5, y: 0, z: 0}
+  endPosition: {x: 0.5, y: 0, z: 0}
+  moveTime: 1
 --- !u!4 &104645901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2381452798738972550, guid: c1906f6c309f742479ce696617e2b63b, type: 3}
@@ -1885,11 +1901,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.25
+      value: 4.51
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.035
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4854,6 +4870,7 @@ GameObject:
   - component: {fileID: 1107616026}
   - component: {fileID: 1107616025}
   - component: {fileID: 1107616024}
+  - component: {fileID: 1107616028}
   m_Layer: 0
   m_Name: MoveWall
   m_TagString: Untagged
@@ -4937,6 +4954,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107616028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107616023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a67743f8ae0a049ace9481cc78ad93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: -0.5, y: 0, z: 0}
+  endPosition: {x: 0.5, y: 0, z: 0}
+  moveTime: 1
 --- !u!4 &1119134982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
@@ -5433,6 +5465,7 @@ GameObject:
   - component: {fileID: 1229130349}
   - component: {fileID: 1229130348}
   - component: {fileID: 1229130347}
+  - component: {fileID: 1229130351}
   m_Layer: 0
   m_Name: MoveWall
   m_TagString: Untagged
@@ -5516,6 +5549,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229130351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229130346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a67743f8ae0a049ace9481cc78ad93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: 0.5, y: 0, z: 0}
+  endPosition: {x: -0.5, y: 0, z: 0}
+  moveTime: 1
 --- !u!1 &1257924833
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,4 +48,9 @@ public class RumbleManager : MonoBehaviour
             StopRumble();
         }
     }
+
+    private void OnApplicationQuit()
+    {
+        StopRumble();
+    }
 }
