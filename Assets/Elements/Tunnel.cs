@@ -8,6 +8,7 @@ public class Tunnel : MonoBehaviour
     [SerializeField] private Transform billeTarget;
     [SerializeField] private Vector3 ejectDirection;
     [SerializeField] private float ejectStrength = 16f;
+    [SerializeField] private string soundPath = "Obstacles/Zaap/Zaap";
 
     private Collider trigger;
     private Animator animator;
@@ -43,6 +44,7 @@ public class Tunnel : MonoBehaviour
 
         attachedBille.AttachForAnimation(billeTarget.transform);
         animator.SetTrigger("Ball In");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/" + soundPath);
     }
 
     public void TeleportBall()
@@ -63,7 +65,6 @@ public class Tunnel : MonoBehaviour
         attachedBille = null;
 
         Invoke("ActivateTrigger", 1f);
-        Debug.Log("Plop");
     }
 
     private void ActivateTrigger()
