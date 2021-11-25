@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4207982788993601916}
   - component: {fileID: 4207982788993601918}
+  - component: {fileID: 1783954848233331901}
   m_Layer: 7
   m_Name: Flipper
   m_TagString: Untagged
@@ -49,6 +50,22 @@ MonoBehaviour:
   activeAngle: -45
   activationFrames: 5
   throwForce: 24
+  soundOnActivation: Other/Flipper
+--- !u!114 &1783954848233331901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4207982788993601891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97df4716474d06248b3a8bf145addf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundPath: Obstacles/Mur
+  rumbleFrequency: 0.45
+  rumbleDuration: 0.2
 --- !u!1 &4207982789754226591
 GameObject:
   m_ObjectHideFlags: 0

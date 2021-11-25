@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hangar : MonoBehaviour
 {
+    private bool launching = false;
     [SerializeField] private BilleManager manager;
     [SerializeField] private GameObject billePrefab;
     [SerializeField] private Vector3 launchOffset;
@@ -11,6 +12,7 @@ public class Hangar : MonoBehaviour
     public Vector3 LaunchPosition => transform.position + launchOffset;
     [SerializeField] private string launchSoundEffect = "Other/Eject";
     [SerializeField] private float launchTimeOffset = 1.7f;
+    [SerializeField] private float launchRumbleIntensity = .6f;
 
     private void Start()
     {
@@ -20,14 +22,17 @@ public class Hangar : MonoBehaviour
 
     public void LaunchBall()
     {
-        if (manager.CurrentBille != null)
+        if (manager.CurrentBille != null || launching)
             return;
+        launching = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/" + launchSoundEffect);
+        RumbleManager.Rumble(launchTimeOffset, launchRumbleIntensity);
         Invoke("Eject", launchTimeOffset);
     }
 
     public void Eject()
     {
+        launching = false;
         manager.CurrentBille = Instantiate(billePrefab, LaunchPosition, Quaternion.identity).GetComponent<Bille>();
         Rigidbody billebody = manager.CurrentBille.GetComponent<Rigidbody>();
         billebody.AddForce(Vector3.forward * maxVelocity, ForceMode.VelocityChange);

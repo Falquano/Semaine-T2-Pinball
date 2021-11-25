@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,18 +8,20 @@ public class Carousel : MonoBehaviour
 {
 	private float anglePerSecond = 0f;
 	private float rotationSign => Mathf.Sign(anglePerSecond);
-	[SerializeField] private float maxAngle = 1440f;
+	[SerializeField] private float maxSpeed = 1440f;
 	[SerializeField] private float timeToReachMaxSpeed = 2f;
-	private float angleModificatorPerSecond => maxAngle / timeToReachMaxSpeed;
+	private float angleModificatorPerSecond => maxSpeed / timeToReachMaxSpeed;
 	private float angleAxis;
+	[SerializeField] private StudioEventEmitter soundEmitter;
 
 	[SerializeField] private float strength = 3f;
 
 	private Rigidbody bille;
 
-	public void FixedUpdate()
+    public void FixedUpdate()
 	{
-		anglePerSecond = Mathf.Clamp(anglePerSecond + angleAxis * angleModificatorPerSecond * Time.fixedDeltaTime, -maxAngle, maxAngle);
+		anglePerSecond = Mathf.Clamp(anglePerSecond + angleAxis * angleModificatorPerSecond * Time.fixedDeltaTime, -maxSpeed, maxSpeed);
+		soundEmitter.SetParameter("CarrouselleVitesse", anglePerSecond / maxSpeed);
 
 		transform.Rotate(Vector3.up * anglePerSecond * Time.deltaTime);
 
@@ -27,7 +30,7 @@ public class Carousel : MonoBehaviour
 
 		Vector3 force = bille.position - transform.position;
 		force = Quaternion.Euler(0, 90 * rotationSign, 0) * force;
-		force *= Mathf.Abs(anglePerSecond) / maxAngle * strength;
+		force *= Mathf.Abs(anglePerSecond) / maxSpeed * strength;
 
 		bille.AddForce(force, ForceMode.Acceleration);
 

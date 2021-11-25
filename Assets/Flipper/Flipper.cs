@@ -59,11 +59,13 @@ public class Flipper : MonoBehaviour
         if (context.performed)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/" + soundOnActivation, transform.position);
+            RumbleManager.Rumble(.05f, .2f);
             active = true;
         }
         else if (context.canceled)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/" + soundOnActivation, transform.position);
+            RumbleManager.Rumble(.05f, .2f);
             active = false;
         }
     }

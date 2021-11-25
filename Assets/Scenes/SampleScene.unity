@@ -309,6 +309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.35
+  rumbleDuration: 0.1
 --- !u!4 &154733722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
@@ -325,6 +327,7 @@ GameObject:
   - component: {fileID: 235346821}
   - component: {fileID: 235346822}
   - component: {fileID: 235346823}
+  - component: {fileID: 235346824}
   m_Layer: 0
   m_Name: Carousel
   m_TagString: Untagged
@@ -359,8 +362,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25465b826a34c349aa787a3c6b4c4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAngle: 1440
+  maxSpeed: 1440
   timeToReachMaxSpeed: 2
+  soundEmitter: {fileID: 235346824}
   strength: 18
 --- !u!135 &235346823
 SphereCollider:
@@ -375,6 +379,106 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &235346824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235346820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 177195204
+      Data2: 1110511242
+      Data3: -1929979748
+      Data4: 1911474710
+    Path: "event:/M\xE9caniques/Carousselle"
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1001 &277493852
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1100620509}
+    m_Modifications:
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865810, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_Name
+      value: Points (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865815, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: points
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865815, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: pointsManager
+      value: 
+      objectReference: {fileID: 1334611026}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+--- !u!4 &277493853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+  m_PrefabInstance: {fileID: 277493852}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &280316661 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4879098122342166911, guid: d73441c38b7b31149af69457b12cebac, type: 3}
@@ -568,6 +672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.35
+  rumbleDuration: 0.1
 --- !u!4 &434715145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8474621604921522384, guid: dd6a3cecef93aab4f87fe59b598150a0, type: 3}
@@ -793,6 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdbe3aa86b7a4ff429cfbe07dd32c983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  absorbSound: Obstacles/Fall
 --- !u!1 &657235487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.5
+  rumbleDuration: 0.2
 --- !u!1 &733716951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.35
+  rumbleDuration: 0.1
 --- !u!65 &930225153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1537,6 +1648,8 @@ Transform:
   - {fileID: 642842901}
   - {fileID: 1119134982}
   - {fileID: 437851960}
+  - {fileID: 1968245235}
+  - {fileID: 277493853}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1665,6 +1778,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.35
+  rumbleDuration: 0.1
 --- !u!1 &1322998378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +1880,7 @@ MonoBehaviour:
   maxVelocity: 16
   launchSoundEffect: Other/Eject
   launchTimeOffset: 1.65
+  launchRumbleIntensity: 0.6
 --- !u!1 &1334611023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,6 +1893,7 @@ GameObject:
   - component: {fileID: 1334611024}
   - component: {fileID: 1334611026}
   - component: {fileID: 1334611027}
+  - component: {fileID: 1334611028}
   m_Layer: 0
   m_Name: '@Player Manager'
   m_TagString: Untagged
@@ -1960,6 +2077,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bec23724e5c3474f97a8ecc10ed1da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mediumPoint: 150
+  highPoint: 500
+  lowPointSoundPath: Scord/Gain/ScoreEasy
+  mediumPointSoundPath: Scord/Gain/ScoreMedium
+  highPointSoundPath: Scord/Gain/ScoreHigh
+  highScoreSoundPath: Score/HighScore
   pointUIText: {fileID: 348737297}
 --- !u!114 &1334611027
 MonoBehaviour:
@@ -1977,6 +2100,18 @@ MonoBehaviour:
   onBilleChange:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1334611028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334611023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe14c4bae2b5464aaf13015cb20bd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1364315060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,6 +2159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.35
+  rumbleDuration: 0.1
 --- !u!65 &1364315063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2257,6 +2394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.35
+  rumbleDuration: 0.1
 --- !u!1 &1731921611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,6 +2505,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f45abb4671c34047857f46c22a41274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1968245234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1100620509}
+    m_Modifications:
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865810, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: m_Name
+      value: Points (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865815, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: points
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735587591426865815, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+      propertyPath: pointsManager
+      value: 
+      objectReference: {fileID: 1334611026}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+--- !u!4 &1968245235 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6735587591426865809, guid: b99b37dcba6c83b4fad825d39e88bda7, type: 3}
+  m_PrefabInstance: {fileID: 1968245234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2051851701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2381452798738972550, guid: c1906f6c309f742479ce696617e2b63b, type: 3}
@@ -2418,6 +2627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Mur
+  rumbleFrequency: 0.35
+  rumbleDuration: 0.1
 --- !u!65 &2101079568
 BoxCollider:
   m_ObjectHideFlags: 0

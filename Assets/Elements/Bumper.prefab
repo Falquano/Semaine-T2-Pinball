@@ -391,6 +391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundPath: Obstacles/Bumper
+  rumbleFrequency: 0.75
+  rumbleDuration: 0.2
 --- !u!1 &4005167267731538750
 GameObject:
   m_ObjectHideFlags: 0
