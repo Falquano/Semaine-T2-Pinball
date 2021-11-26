@@ -14,12 +14,12 @@ public class HangarGate : MonoBehaviour
 
     public void OpenGate()
     {
-        gate.transform.position += Vector3.up * -2.1f;
+        gate.transform.localPosition = Vector3.up * -1.1f;
     }
 
     public void CloseGate()
     {
-        gate.transform.position -= Vector3.up * -2.1f;
+        gate.transform.localPosition = Vector3.zero;
     }
     
 
