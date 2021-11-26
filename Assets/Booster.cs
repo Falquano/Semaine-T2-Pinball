@@ -9,7 +9,7 @@ public class Booster : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bille"))
-            other.attachedRigidbody.AddForce(force, ForceMode.VelocityChange);
+            other.attachedRigidbody.velocity = force;
     }
 
     private void OnDrawGizmosSelected()
