@@ -62,9 +62,9 @@ GameObject:
   - component: {fileID: 4587587875829918341}
   - component: {fileID: 4207982789754226587}
   - component: {fileID: 4207982789754226586}
-  - component: {fileID: 4207982789754226585}
+  - component: {fileID: 7532019418354305833}
   m_Layer: 7
-  m_Name: Cube
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,13 +77,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4207982789754226591}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 1.1, y: 0.25, z: 0}
-  m_LocalScale: {x: 2.15, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4207982788993601916}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!114 &4587587875829918341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e867c21a68bba8d448fd8ef4ddd80c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  billeManager: {fileID: 0}
   pivot: {x: 0, y: 0, z: 0}
 --- !u!33 &4207982789754226587
 MeshFilter:
@@ -104,7 +105,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4207982789754226591}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 575119829107983959, guid: 082bc2d0a4d20534682c81266108a0a1, type: 3}
 --- !u!23 &4207982789754226586
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -146,16 +147,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4207982789754226585
-BoxCollider:
+--- !u!64 &7532019418354305833
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4207982789754226591}
-  m_Material: {fileID: 13400000, guid: f533f39de44c493488950d884a746e5c, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 082bc2d0a4d20534682c81266108a0a1, type: 3}
