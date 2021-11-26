@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,21 +14,28 @@ public class Aimant : MonoBehaviour
 	[SerializeField] private float maxRange = 6f;
 	[SerializeField] private float minRange = 2f;
 	[SerializeField] private GameObject lightFX;
+	[SerializeField] private StudioEventEmitter sound;
+	private LineRenderer line;
 
 	private void Start()
 	{
+		line = GetComponentInChildren<LineRenderer>();
+
 		if (manager == null)
 			manager = GameObject.FindObjectOfType<BilleManager>();
 		if (manager == null)
 			throw new System.Exception("Il faut un BilleManager dans la scène !");
 
 		manager.OnBilleChange.AddListener(SetBille);
+
+		SetMagnetOn(false);
 	}
 
 	private void SetMagnetOn(bool value)
     {
 		magnetOn = value;
 		lightFX.SetActive(value);
+		line.enabled = value;
     }
 
 	public void SetBille(Bille newBille)
@@ -51,12 +59,17 @@ public class Aimant : MonoBehaviour
 
 		bille.AddForce(direction * strength * distanceStrength, ForceMode.Force);
 		Debug.DrawRay(bille.position, direction * strength, Color.blue);
+		
+		line.SetPosition(line.positionCount - 1, Vector3.ClampMagnitude(bille.position - transform.position, maxRange));
     }
 
 	public void InputMagnet(UnityEngine.InputSystem.InputAction.CallbackContext context)
 	{
 		if (context.performed)
+		{
 			MagnetOn = !MagnetOn;
+			sound.SetParameter("Aimant onoff", MagnetOn ? 2f : 1f);
+		}
 	}
 
 	private void OnDrawGizmosSelected()
