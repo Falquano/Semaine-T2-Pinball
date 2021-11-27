@@ -49,6 +49,7 @@ public class Aimant : MonoBehaviour
 		if (newBille == null)
 		{
 			bille = null;
+			line.enabled = false;
 			return;
 		}
 		bille = newBille.GetComponent<Rigidbody>();
