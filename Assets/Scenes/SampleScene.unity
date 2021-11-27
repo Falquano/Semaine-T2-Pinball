@@ -4004,6 +4004,7 @@ GameObject:
   - component: {fileID: 915876468}
   - component: {fileID: 915876470}
   - component: {fileID: 915876469}
+  - component: {fileID: 915876473}
   m_Layer: 0
   m_Name: Ding
   m_TagString: Untagged
@@ -4105,6 +4106,37 @@ MonoBehaviour:
   specialPoints: 500
   maxHP: 3
   HP: 0
+  sound: {fileID: 915876473}
+--- !u!114 &915876473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915876467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1093106582
+      Data2: 1267794368
+      Data3: 1942260918
+      Data4: -38174156
+    Path: event:/Score/Ding
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &930225150
 GameObject:
   m_ObjectHideFlags: 0
@@ -6996,7 +7028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.88
+      value: 6.63
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7004,7 +7036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.26
+      value: 19.38
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248258, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7048,7 +7080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248259, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: ejectDirection.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248259, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: ejectDirection.y
@@ -7056,7 +7088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705682922949248259, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: ejectDirection.z
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 705682924371620113, guid: ed0be3bd00f85f046b9d423ca8207118, type: 3}
       propertyPath: m_Materials.Array.data[0]

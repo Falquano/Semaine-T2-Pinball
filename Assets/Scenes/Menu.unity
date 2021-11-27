@@ -325,11 +325,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 3a7e14cf-6ee2-4338-9f46-057dd6bd4c77
-    m_ActionName: UI/Any[/Keyboard/anyKey]
+    m_ActionId: d40cf38b-511e-42e6-b795-21013630208a
+    m_ActionName: UI/Continue[/Keyboard/space,/Keyboard/enter,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: UI
+  m_DefaultActionMap: b7ad9847-0032-41d2-bec3-bdab79b9d552
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &353001116

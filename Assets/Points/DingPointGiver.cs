@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class DingPointGiver : MonoBehaviour
     [SerializeField] private int maxHP = 3;
     [SerializeField] private int HP;
 
+    [SerializeField] private StudioEventEmitter sound;
 
     private void Start()
     {
@@ -26,6 +28,8 @@ public class DingPointGiver : MonoBehaviour
     private void OnTouch()
     {
         HP--;
+        sound.SetParameter("Parameter 3", maxHP - HP);
+        sound.Play();
         if (HP <= 0)
             SpecialDing();
         else
