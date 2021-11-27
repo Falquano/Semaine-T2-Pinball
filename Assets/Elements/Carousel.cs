@@ -23,7 +23,7 @@ public class Carousel : MonoBehaviour
 		anglePerSecond = Mathf.Clamp(anglePerSecond + angleAxis * angleModificatorPerSecond * Time.fixedDeltaTime, -maxSpeed, maxSpeed);
 		soundEmitter.SetParameter("CarrouselleVitesse", anglePerSecond / maxSpeed);
 
-		transform.Rotate(Vector3.up * anglePerSecond * Time.deltaTime);
+		transform.Rotate(Vector3.up * anglePerSecond * Time.fixedDeltaTime);
 
 		if (bille == null)
 			return;

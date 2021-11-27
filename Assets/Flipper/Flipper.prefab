@@ -48,7 +48,7 @@ MonoBehaviour:
   restingAngle: 0
   activeAngle: -45
   activationFrames: 5
-  throwForce: 24
+  throwForce: 16
   soundOnActivation: Other/Flipper
 --- !u!1 &4207982789754226591
 GameObject:

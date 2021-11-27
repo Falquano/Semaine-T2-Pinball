@@ -16,10 +16,13 @@ public class Aimant : MonoBehaviour
 	[SerializeField] private GameObject lightFX;
 	[SerializeField] private StudioEventEmitter sound;
 	private LineRenderer line;
+	private Rotator rotator;
 
 	private void Start()
 	{
 		line = GetComponentInChildren<LineRenderer>();
+		line.enabled = false;
+		rotator = GetComponent<Rotator>();
 
 		if (manager == null)
 			manager = GameObject.FindObjectOfType<BilleManager>();
@@ -36,6 +39,9 @@ public class Aimant : MonoBehaviour
 		magnetOn = value;
 		lightFX.SetActive(value);
 		line.enabled = value;
+		if (value == false)
+			line.SetPosition(1, Vector3.zero);
+		rotator.Active = value;
     }
 
 	public void SetBille(Bille newBille)
@@ -60,7 +66,7 @@ public class Aimant : MonoBehaviour
 		bille.AddForce(direction * strength * distanceStrength, ForceMode.Force);
 		Debug.DrawRay(bille.position, direction * strength, Color.blue);
 		
-		line.SetPosition(line.positionCount - 1, Vector3.ClampMagnitude(bille.position - transform.position, maxRange));
+		line.SetPosition(line.positionCount - 1, Vector3.ClampMagnitude(transform.InverseTransformPoint(bille.position), maxRange));
     }
 
 	public void InputMagnet(UnityEngine.InputSystem.InputAction.CallbackContext context)
