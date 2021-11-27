@@ -93,6 +93,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6cda36cc-7a0f-4046-bf72-bf903d57e9cc",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Left Flipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "28204f3e-d939-40e8-9d51-3e2162eaae48",
                     "path": "<Keyboard>/d",
                     "interactions": "",
@@ -117,6 +128,17 @@
                     "name": "",
                     "id": "5b1e3002-69b1-4229-836a-43824e9412af",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Right Flipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70540169-66e9-43af-ae7b-f3e192879af8",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -205,6 +227,17 @@
                     "name": "",
                     "id": "841a5bef-9779-47f7-a02f-8c34d7621cc8",
                     "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Launch Ball",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1eda971-de4a-4931-910a-ffaf8722171c",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
