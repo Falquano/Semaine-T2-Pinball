@@ -36,11 +36,8 @@ public class BilleFollower : MonoBehaviour
         Vector3 targetPosition = currentTarget.position;
         targetPosition.x = 0;
         targetPosition += offsetFromObject.normalized * distanceFromObject;
-
-        if (Application.isEditor)
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
-        else
-            transform.position = targetPosition;
+        
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, smoothTime);
     }
 
     private void ChangeBille(Bille newBille)

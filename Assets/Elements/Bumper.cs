@@ -7,6 +7,7 @@ public class Bumper : MonoBehaviour
     [SerializeField] private float strength = 4f;
     [SerializeField] private GameObject bumpLights;
     [SerializeField] private float bumpLightsDuration = .2f;
+    [SerializeField] private Vector3 customPivot;
 
 	private void Start()
 	{
@@ -15,7 +16,7 @@ public class Bumper : MonoBehaviour
 
 	private void OnCollisionEnter(Collision collision)
     {
-        Vector3 direction = collision.gameObject.transform.position - transform.position;
+        Vector3 direction = collision.gameObject.transform.position - (transform.position + customPivot);
         collision.rigidbody.AddForce(direction.normalized * strength, ForceMode.Impulse);
 
         BumpFX();
@@ -31,4 +32,9 @@ public class Bumper : MonoBehaviour
 	{
         bumpLights.SetActive(false);
 	}
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position + customPivot, .1f);
+    }
 }

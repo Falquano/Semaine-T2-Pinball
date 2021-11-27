@@ -9,6 +9,7 @@ public class Tunnel : MonoBehaviour
     [SerializeField] private Vector3 ejectDirection;
     [SerializeField] private float ejectStrength = 16f;
     [SerializeField] private string soundPath = "Obstacles/Zaap/Zaap";
+    [SerializeField] private bool canEnter = true;
 
     private Collider trigger;
     private Animator animator;
@@ -34,7 +35,7 @@ public class Tunnel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Bille"))
+        if (!other.CompareTag("Bille") || !canEnter)
             return;
 
         trigger.enabled = false;
@@ -60,7 +61,7 @@ public class Tunnel : MonoBehaviour
     public void EjectBall()
     {
         attachedBille.DetachAnimation();
-        attachedBille.GetComponent<Rigidbody>().AddForce(ejectDirection.normalized * ejectStrength, ForceMode.Impulse);
+        attachedBille.GetComponent<Rigidbody>().AddForce(ejectDirection.normalized * ejectStrength * Random.Range(.5f, 1f), ForceMode.Impulse);
 
         attachedBille = null;
 
