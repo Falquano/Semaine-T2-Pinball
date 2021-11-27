@@ -49,7 +49,7 @@ public class Aimant : MonoBehaviour
 		if (newBille == null)
 		{
 			bille = null;
-			line.enabled = false;
+			line.SetPosition(1, Vector3.zero);
 			return;
 		}
 		bille = newBille.GetComponent<Rigidbody>();
