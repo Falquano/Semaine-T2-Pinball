@@ -7367,7 +7367,7 @@ MonoBehaviour:
   billePrefab: {fileID: 2091092585405261428, guid: effa2eb7baa37db4e975324c382b484f, type: 3}
   launchOffset: {x: 0, y: -0.26, z: 2.5}
   minVelocity: 8
-  maxVelocity: 48
+  maxVelocity: 44
   launchSoundEffect: Other/Eject
   launchTimeOffset: 1.65
   launchRumbleIntensity: 0.6
@@ -7674,7 +7674,6 @@ MonoBehaviour:
   lowPointSoundPath: Score/Gain/ScoreEasy
   mediumPointSoundPath: Score/Gain/ScoreMedium
   highPointSoundPath: Score/Gain/ScoreHigh
-  highScoreSoundPath: Score/HighScore
   pointUIText: {fileID: 348737297}
   highscoreUIText: {fileID: 992269771}
 --- !u!114 &1334611027
@@ -7729,8 +7728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a042c38bcabb09b4888ad44880fc8fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 0
-  currentLives: 0
+  maxLives: 3
   livesUIText: {fileID: 1497548913}
 --- !u!4 &1362473593 stripped
 Transform:
