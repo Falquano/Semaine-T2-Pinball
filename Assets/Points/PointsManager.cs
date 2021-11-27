@@ -7,7 +7,7 @@ public class PointsManager : MonoBehaviour
 {
     private int points = 0;
     public int Points { get => points; set => SetPoints(value); }
-    public int HighScore { get; set; } = 1000;
+    public int HighScore { get; private set; }
 
     [SerializeField] private int mediumPoint = 150;
     [SerializeField] private int highPoint = 500;
@@ -18,16 +18,33 @@ public class PointsManager : MonoBehaviour
     [SerializeField] private string highScoreSoundPath = "Score/HighScore";
 
     [SerializeField] private Text pointUIText;
+    [SerializeField] private Text highscoreUIText;
+
+    private void Start()
+    {
+        LoadHighScore();
+        highscoreUIText.text = "High score " + HighScore;
+        pointUIText.text = "Points " + points;
+    }
+
+    private void OnDestroy()
+    {
+        SaveHighScore();
+    }
 
     private void SetPoints(int value)
     {
         int increase = value - points;
         points = value;
-        pointUIText.text = value.ToString();
+        pointUIText.text = "Points " + points;
 
         PointFX(increase);
+
         if (Points > HighScore)
+        {
             HighScore = Points;
+            highscoreUIText.text = "High score " + HighScore;
+        }
     }
 
     private void PointFX(int pointChange)
@@ -44,5 +61,15 @@ public class PointsManager : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/" + lowPointSoundPath);
         }
+    }
+
+    private void SaveHighScore()
+    {
+        PlayerPrefs.SetInt("highscore", HighScore);
+    }
+
+    private void LoadHighScore()
+    {
+        HighScore = PlayerPrefs.GetInt("highscore");
     }
 }

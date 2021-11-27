@@ -6,6 +6,7 @@ public class HangarGate : MonoBehaviour
 {
     [SerializeField] private Hangar hangar;
     [SerializeField] private Transform gate;
+    [SerializeField] private Vector3 transformationWhenOpen = new Vector3(0, 0, .26f);
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class HangarGate : MonoBehaviour
 
     public void OpenGate()
     {
-        gate.transform.localPosition = Vector3.up * -1.1f;
+        gate.transform.localPosition = transformationWhenOpen;
     }
 
     public void CloseGate()
