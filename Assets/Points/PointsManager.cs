@@ -15,7 +15,6 @@ public class PointsManager : MonoBehaviour
     [SerializeField] private string lowPointSoundPath = "Score/Gain/ScoreEasy";
     [SerializeField] private string mediumPointSoundPath = "Score/Gain/ScoreMedium";
     [SerializeField] private string highPointSoundPath = "Score/Gain/ScoreHigh";
-    [SerializeField] private string highScoreSoundPath = "Score/HighScore";
 
     [SerializeField] private Text pointUIText;
     [SerializeField] private Text highscoreUIText;
